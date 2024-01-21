@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://5pupm7xbudhv"]
+[gd_scene load_steps=34 format=3 uid="uid://5pupm7xbudhv"]
 
 [ext_resource type="Texture2D" uid="uid://dtjvlf77rtv25" path="res://Sunny-land-files/Graphical Assets/sprites/player/climb/player-climb-1.png" id="1_hn7tj"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_s36o4"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bmfaqliijj681" path="res://Sunny-land-files/Graphical Assets/sprites/player/run/player-run-4.png" id="17_wwpie"]
 [ext_resource type="Texture2D" uid="uid://corchrv5bpeji" path="res://Sunny-land-files/Graphical Assets/sprites/player/run/player-run-5.png" id="18_s6x44"]
 [ext_resource type="Texture2D" uid="uid://dcvn4ghp5ueg1" path="res://Sunny-land-files/Graphical Assets/sprites/player/run/player-run-6.png" id="19_3bjn7"]
+[ext_resource type="PackedScene" uid="uid://w6n48gardc1m" path="res://Inventory/inv_ui.tscn" id="21_epscy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxwjk"]
 size = Vector2(20, 22.25)
@@ -394,3 +395,9 @@ libraries = {
 "": SubResource("AnimationLibrary_32cyy")
 }
 autoplay = "Idle"
+
+[node name="Inv_UI" parent="." instance=ExtResource("21_epscy")]
+offset_left = -51.0
+offset_top = -123.0
+offset_right = -11.0
+offset_bottom = -83.0

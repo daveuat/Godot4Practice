@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxqqiwtqcvqp2"]
+[gd_scene load_steps=11 format=3 uid="uid://cxqqiwtqcvqp2"]
 
 [ext_resource type="PackedScene" uid="uid://5pupm7xbudhv" path="res://Player/player.tscn" id="1_sq6dt"]
 [ext_resource type="PackedScene" uid="uid://ome6ein1lifc" path="res://BG.tscn" id="2_oegpr"]
 [ext_resource type="Texture2D" uid="uid://b3yd8ygbjrho7" path="res://Sunny-land-files/Graphical Assets/environment/tileset.png" id="3_rno7l"]
+[ext_resource type="Resource" uid="uid://ka1hxywrm5mi" path="res://Inventory/playerinv.tres" id="4_e7s6i"]
 [ext_resource type="PackedScene" uid="uid://cd48cvancubeq" path="res://frog.tscn" id="4_flfjo"]
 [ext_resource type="PackedScene" uid="uid://ctgxej8n8kri7" path="res://dirt_tile_1.tscn" id="5_tix5o"]
+[ext_resource type="PackedScene" uid="uid://cfabatelna075" path="res://cherry.tscn" id="7_5hyv4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_673qm"]
 texture = ExtResource("3_rno7l")
@@ -487,6 +489,7 @@ func _process(delta):
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, 0)
+scale = Vector2(3.03525, 1.23783)
 
 [node name="BG" parent="." instance=ExtResource("2_oegpr")]
 scroll_offset = Vector2(0, -354.886)
@@ -500,6 +503,7 @@ layer_0/tile_data = PackedInt32Array(983039, 65536, 3, 983038, 65536, 3, 1048575
 
 [node name="Player" parent="Player" instance=ExtResource("1_sq6dt")]
 position = Vector2(68, 523)
+inv = ExtResource("4_e7s6i")
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -550,6 +554,10 @@ polygon = PackedVector2Array(1959.81, 231.324, 1961.81, 365.324, 2295.04, 363.34
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+
+[node name="Cherry" parent="." instance=ExtResource("7_5hyv4")]
+position = Vector2(100, 505)
+disable_mode = 0
 
 [editable path="DirtTile1"]
 [editable path="DirtTile2"]
